@@ -16,6 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          새로운 내용을 입력하고
         </a>
       </header>
     </div>
