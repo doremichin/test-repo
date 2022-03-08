@@ -1,4 +1,3 @@
-import './App.css';
 import './style/variables.scss';
 import Routers from "./Routers";
 

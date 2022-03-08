@@ -4,8 +4,9 @@ import {variables} from "../../../style/_vriables";
 const HomeContainer = () => {
     return(
         <Container>
-            <ColorBox></ColorBox>
-            <ColorBox2 className={'box'}></ColorBox2>
+            home~
+            {/*<ColorBox></ColorBox>*/}
+            {/*<ColorBox2 className={'box'}></ColorBox2>*/}
         </Container>
     )
 };
