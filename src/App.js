@@ -1,12 +1,10 @@
 import './App.css';
-import Home from "./page/Home";
 import './style/variables.scss';
+import Routers from "./Routers";
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-    </div>
+      <Routers/>
   );
 }
 
