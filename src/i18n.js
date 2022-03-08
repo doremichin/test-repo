@@ -21,7 +21,14 @@ i18n
         resources: {
             en: {
                 translation: {
-                    "Welcome to React": "Welcome to React and react-i18next"
+                    "Welcome to React": "Welcome to React and react-i18next",
+                    "나도 보쌈 먹고싶다아" : "아니야 양꼬치가 더 나을 거 같아"
+                }
+            },
+            jp : {
+                translation : {
+                    "Welcome to React": "혼모노 환영데스네",
+                    "나도 보쌈 먹고싶다아" : "양꼬치 스키요"
                 }
             }
         },
