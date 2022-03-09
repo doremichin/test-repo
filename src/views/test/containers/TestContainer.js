@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { useTranslation } from "react-i18next";
+import { useTranslation,withTranslation } from "react-i18next";
 import i18n from "i18next";
-
+import { Button } from 'reactstrap';
+import TestComponent from "../components/TestComponent";
 const TestContainer = () => {
     const { t } = useTranslation(['page']);
     const onChangeLang = (e) => {
@@ -16,14 +17,13 @@ const TestContainer = () => {
             height: '100vh'
         }}>
             <h2>{t('page:startPage')}</h2>
-            <button onClick={onChangeLang}>
+            <Button onClick={onChangeLang} color={'danger'}>
                 Change Language
-            </button>
+            </Button>
             <Select onChange={onChangeLang}>
                 <option value="en">en</option>
                 <option value="ko">ko</option>
             </Select>
-
         </div>
     )
 };
@@ -38,4 +38,4 @@ const Select = styled.select`
   
 `;
 
-export default TestContainer;
+export default withTranslation('page', {})(TestContainer);
