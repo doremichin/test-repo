@@ -22,7 +22,8 @@ export const QUERY_BOARD_NOTICE = gql`
 
 const HomeContainer = () => {
     const language = i18n.language;
-    const {data, error,loading} = useQuery(QUERY_BOARD_NOTICE,{
+    //refetch 기능이 캐싱여부를 파악해서 같은 쿼리는 알아서 두번 요청 안하는 듯
+    const {data, error,loading, refetch} = useQuery(QUERY_BOARD_NOTICE,{
         variables : {
             where: {
                 code: 20100,
@@ -30,11 +31,25 @@ const HomeContainer = () => {
             }
         }
     })
+    const arrComponent = [
+        <h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>
+    ]
+
     if(loading) return null;
     console.log(data)
     return(
         <Container>
+            {arrComponent}
+            {data.boardCodeConnection.nodes[0].name}
             home~
+            <Button onClick={() => refetch({
+                where : {
+                    code : 20100,
+                    langType : "KO"
+                }
+            })}>
+                재요청
+            </Button>
             {/*<ColorBox></ColorBox>*/}
             {/*<ColorBox2 className={'box'}></ColorBox2>*/}
             <TableComponent/>
@@ -44,6 +59,22 @@ const HomeContainer = () => {
 
 const Container = styled.div`
 
+`;
+const Button = styled.div`
+  border-radius: 5px;
+  font-weight: 800;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  background-color: #18f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    opacity: 0.3;
+  }
 `;
 const ColorBox = styled.div`
   width: 500px;
