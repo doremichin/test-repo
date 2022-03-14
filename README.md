@@ -31,3 +31,27 @@ RoomPage.tsx
 - \<LiveKitRoom/> props 값으로 url, token 전달
 
 craco
+
+--------------------------------
+### react-hook-form + reactstrap 
+```javascript
+ const {ref, ...emailFField} = register('email')
+    return(
+        <Container>
+            <FormGroup>
+                <Label for="exampleEmail">
+                    Email
+                </Label>
+                <Input
+                    tag="input"
+                    id="exampleEmail"
+                    name="email"
+                    placeholder="with a placeholder"
+                    type="email"
+                    innerRef={ref}
+                    {...emailFField}
+                />
+            </FormGroup>
+        </Container>
+    )
+```
