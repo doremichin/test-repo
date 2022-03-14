@@ -31,17 +31,16 @@ const HomeContainer = () => {
             }
         }
     })
-    const arrComponent = [
-        <h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>
-    ]
+    // const arrComponent = [
+    //     <h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>,<h1>헬롱</h1>
+    // ]
 
     if(loading) return null;
     console.log(data)
     return(
         <Container>
-            {arrComponent}
+            {/*{arrComponent}*/}
             {data.boardCodeConnection.nodes[0].name}
-            home~
             <Button onClick={() => refetch({
                 where : {
                     code : 20100,

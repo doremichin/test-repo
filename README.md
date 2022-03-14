@@ -8,6 +8,8 @@ lazy import / suspense
 
 reactstrap
 
+mui
+
 react-draggable
 
 graphql-apollo

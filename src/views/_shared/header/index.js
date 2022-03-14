@@ -7,6 +7,7 @@ const Header = () => {
             <Nav>
                 <NavItem to={'/'}>Home</NavItem>
                 <NavItem to={'/live'}>Live</NavItem>
+                <NavItem to={'/form'}>Form</NavItem>
             </Nav>
         </Container>
     )
